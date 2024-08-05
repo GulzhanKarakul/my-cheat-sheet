@@ -1,0 +1,148 @@
+/* Базовые настройки CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    background: var(--backgr-color-gradient);
+}
+
+:root {
+    --color-ocean: #3b94ca;
+    --color-dark: #333232;
+    --color-white: #fff;
+    --color-light: #effcff;
+    --color-danger: #ff7c1f;
+    --backgr-color-gradient: linear-gradient(135deg, #1B3C83, #4edff5);
+    --width_XL: 80%;
+    --width_MD: 95%;
+    --width_S: 98%;
+}
+
+.container {
+    width: var(--width_XL);
+    margin: 0 auto;
+    background-color: var(--color-light);
+    padding: 1.3rem;
+}
+
+a {
+    font-size: 1.2rem;
+    color: var(--color-dark);
+    font-weight: 600;
+    transition: 500ms;
+}
+
+a:hover {
+    color: var(--color-ocean);
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--color-ocean);
+}
+
+p{
+    margin-top: 1rem;
+}
+
+/* Header Css */
+header {
+    background-color: white;
+    height: 100px;
+}
+
+/* .window-scroll{
+    position: fixed;
+    top: 0;
+    width: 100%;
+} */
+
+.container_grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: transparent;
+}
+
+.logo {
+    background: var(--backgr-color-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Main Homepage*/
+main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    min-height: calc(100vh - 100px);
+}
+/* Aside CSS */
+.aside-nav {
+    display: block;
+}
+ul{
+    width: 100%;
+}
+li {
+    border: 1px solid #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+/* Section CSS */
+article {
+    display: none;
+    text-align: center;
+    line-height: 1.2rem;
+    padding: 1rem 2rem;
+}
+article.active {
+    display: block; 
+}
+
+article h3{
+    text-align: center;
+}
+
+mark {
+    font-weight: 600;
+}
+details {
+}
+summary {
+    text-align: center;
+    border: 5px double var(--color-danger);
+    border-radius: 1px ;
+    font-weight: 600;
+    color: var(--color-danger);
+    transition: 500ms;
+    margin: 10px 0;
+}
+details[open] summary{
+    background: var(--color-danger);
+    border-color: #000;
+    color: #000;
+    transition: 500ms;
+}
+
+form {
+    margin: 1rem 0;
+}
+label {
+    margin-right: 2rem;
+}
